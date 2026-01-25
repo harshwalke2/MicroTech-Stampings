@@ -1,0 +1,273 @@
+.capabilities {
+  padding: 120px 0;
+  background: linear-gradient(135deg, #f9fafb 0%, #fff 100%);
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  margin-bottom: 80px;
+}
+
+.capability-card {
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: scaleIn 0.6s ease;
+}
+
+.capability-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 24px 48px rgba(59, 130, 246, 0.12);
+  transform: translateY(-8px);
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.capability-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.capability-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.capability-card:hover .capability-image img {
+  transform: scale(1.08);
+}
+
+.capability-content {
+  padding: 35px;
+}
+
+.capability-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0a0e27;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.capability-desc {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.machine-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  border-left: 3px solid #3b82f6;
+}
+
+.spec-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.spec-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.manufacturing-info {
+  text-align: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+}
+
+.info-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ff6b35;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.info-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+@media (max-width: 1024px) {
+  .capabilities {
+    padding: 70px 0;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+  }
+
+  .capability-content {
+    padding: 30px;
+  }
+
+  .capability-title {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .capabilities {
+    padding: 60px 0;
+  }
+
+  .capabilities-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .section-subtitle {
+    font-size: 24px;
+  }
+
+  .capability-image {
+    height: 220px;
+  }
+
+  .capability-content {
+    padding: 25px;
+  }
+
+  .capability-title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  .capability-desc {
+    font-size: 12px;
+    margin-bottom: 18px;
+  }
+
+  .machine-specs {
+    gap: 15px;
+  }
+
+  .spec-item {
+    padding: 12px;
+  }
+
+  .spec-label {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .spec-value {
+    font-size: 15px;
+  }
+
+  .manufacturing-info {
+    padding: 30px;
+  }
+
+  .info-value {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .capabilities {
+    padding: 40px 0;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+  }
+
+  .capabilities-grid {
+    gap: 25px;
+  }
+
+  .capability-image {
+    height: 180px;
+  }
+
+  .capability-content {
+    padding: 18px;
+  }
+
+  .capability-title {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .capability-desc {
+    font-size: 11px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+
+  .machine-specs {
+    gap: 12px;
+  }
+
+  .spec-item {
+    padding: 10px;
+    border-left-width: 2px;
+  }
+
+  .spec-label {
+    font-size: 9px;
+    margin-bottom: 3px;
+  }
+
+  .spec-value {
+    font-size: 13px;
+  }
+
+  .manufacturing-info {
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .info-label {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+
+  .info-value {
+    font-size: 15px;
+  }
+}
