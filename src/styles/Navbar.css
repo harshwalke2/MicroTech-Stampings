@@ -1,15 +1,16 @@
 .navbar {
-  background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  background: linear-gradient(90deg, #23263a 0%, #2d3250 100%);
   color: #fff;
-  padding: 16px 0;
+  padding: 18px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.18);
 }
 
 .navbar-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 40px;
   display: flex;
@@ -18,40 +19,69 @@
 }
 
 .navbar-logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 800;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  transition: transform 200ms ease-out;
 }
 
-.logo-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.navbar-menu {
+.navbar-logo {
   display: flex;
-  list-style: none;
-  gap: 48px;
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #fff;
+  transition: transform 200ms ease-out;
+}
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+.logo-img {
+  height: 38px;
+  width: 38px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+}
+.logo-text {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.navbar-menu a {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 200ms ease-out;
+  text-transform: capitalize;
+  position: relative;
 }
 
-.navbar-menu a {
-  color: #b8c6db;
-  font-size: 14px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  text-transform: capitalize;
+.navbar-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+  transition: width 200ms ease-out;
 }
 
 .navbar-menu a:hover {
   color: #3b82f6;
+}
+
+.navbar-menu a:hover::after {
+  width: 100%;
 }
 
 .hamburger {
@@ -64,9 +94,9 @@
 .hamburger span {
   width: 25px;
   height: 2.5px;
-  background-color: #fff;
+  background-color: #111827;
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: all 300ms ease-out;
 }
 
 .hamburger.active span:nth-child(1) {

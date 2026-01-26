@@ -4,6 +4,7 @@
   "description": "Microtech Stampings - Precision Metal Press Components",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "^5.0.1"
@@ -11,7 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "dev":"npm run start",
+    "dev": "npm run start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -42,6 +43,5 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/harshwalke2/Microtech-Stampings/issues"
-  },
-  "homepage": "https://github.com/harshwalke2/Microtech-Stampings#readme"
+  }
 }

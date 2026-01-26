@@ -12,70 +12,27 @@ function Capabilities() {
 
         <div className="capabilities-grid">
           <div className="capability-card">
-            <div className="capability-image">
-              <img src="https://microtechstampings.lovable.app/assets/product-sheetmetal-80owJ07a.jpg" alt="C Type Duplex Mechanical Power Press" />
+            <div className="capability-icon">
+              <span role="img" aria-label="gear" style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 8px #3b82f633)' }}>⚙️</span>
             </div>
             <div className="capability-content">
               <h4 className="capability-title">C Type Duplex Mechanical Power Press</h4>
-              <p className="capability-desc">High-precision pressing for complex metal forming operations</p>
-              <div className="machine-specs">
-                <div className="spec-item">
-                  <span className="spec-label">Capacity</span>
-                  <span className="spec-value">30 Ton</span>
-                </div>
-                <div className="spec-item">
-                  <span className="spec-label">Units Available</span>
-                  <span className="spec-value">2</span>
-                </div>
-              </div>
+              <p className="capability-desc">High-precision pressing for complex metal forming operations with advanced control systems ensuring consistent quality across production runs.</p>
             </div>
           </div>
 
           <div className="capability-card">
-            <div className="capability-image">
-              <img src="https://microtechstampings.lovable.app/assets/product-camlock-BI7DjqIE.jpg" alt="Mechanical Shearing Machine" />
+            <div className="capability-icon">
+              <span role="img" aria-label="scissors" style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 8px #3b82f633)' }}>✂️</span>
             </div>
             <div className="capability-content">
               <h4 className="capability-title">Mechanical Shearing Machine</h4>
-              <p className="capability-desc">Precise cutting capability for various sheet thicknesses</p>
-              <div className="machine-specs">
-                <div className="spec-item">
-                  <span className="spec-label">Capacity</span>
-                  <span className="spec-value">1250 x 2mm</span>
-                </div>
-                <div className="spec-item">
-                  <span className="spec-label">Units Available</span>
-                  <span className="spec-value">2</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="capability-card">
-            <div className="capability-image">
-              <img src="https://microtechstampings.lovable.app/assets/product-sheetmetal-80owJ07a.jpg" alt="Air Compressor" />
-            </div>
-            <div className="capability-content">
-              <h4 className="capability-title">Air Compressor</h4>
-              <p className="capability-desc">Reliable pneumatic power for automated operations</p>
-              <div className="machine-specs">
-                <div className="spec-item">
-                  <span className="spec-label">Capacity</span>
-                  <span className="spec-value">2 HP</span>
-                </div>
-                <div className="spec-item">
-                  <span className="spec-label">Units Available</span>
-                  <span className="spec-value">2</span>
-                </div>
-              </div>
+              <p className="capability-desc">Precise cutting capability for various sheet thicknesses with remarkable accuracy, handling diverse materials for custom component requirements.</p>
             </div>
           </div>
         </div>
 
-        <div className="manufacturing-info">
-          <div className="info-label">Manufacturing Unit:</div>
-          <div className="info-value">Pune, Maharashtra, India</div>
-        </div>
+       
       </div>
     </section>
   );

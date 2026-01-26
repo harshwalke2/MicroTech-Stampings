@@ -6,27 +6,27 @@ function Values() {
     {
       title: 'Excellence',
       description: 'We deliver uncompromising quality and precision through advanced technology, rigorous inspection, and a commitment to continuous improvement.',
-      image: 'https://microtechstampings.lovable.app/assets/product-camlock-BI7DjqIE.jpg'
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop'
     },
     {
       title: 'Innovation',
       description: 'We embrace advanced manufacturing techniques and smart engineering solutions to create high-performance metal components that meet evolving industry needs.',
-      image: 'https://microtechstampings.lovable.app/assets/product-sheetmetal-80owJ07a.jpg'
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop'
     },
     {
       title: 'Sustainability',
       description: 'We optimize resources and reduce waste to ensure responsible and sustainable manufacturing practices.',
-      image: 'https://microtechstampings.lovable.app/assets/product-camlock-BI7DjqIE.jpg'
+      image: 'https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=600&fit=crop'
     },
     {
       title: 'Client Satisfaction',
       description: 'We build lasting partnerships by delivering precise, reliable components on time and providing responsive, customer-focused support.',
-      image: 'https://microtechstampings.lovable.app/assets/product-sheetmetal-80owJ07a.jpg'
+      image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop'
     },
     {
       title: 'Global Reach',
       description: 'We serve both domestic and international markets, supplying precision metal components that meet global quality and performance standards.',
-      image: 'https://microtechstampings.lovable.app/assets/product-camlock-BI7DjqIE.jpg'
+      image: 'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=600&fit=crop'
     }
   ];
 

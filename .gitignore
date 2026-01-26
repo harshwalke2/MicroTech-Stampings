@@ -16,3 +16,8 @@ dist/
 build/
 .env
 .vscode/
+node_modules
+build
+.env
+.DS_Store
+

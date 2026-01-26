@@ -1,6 +1,6 @@
 .values {
   padding: 120px 0;
-  background-color: #fff;
+  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
 }
 
 .section-description {
