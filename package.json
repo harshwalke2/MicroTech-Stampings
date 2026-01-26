@@ -2,6 +2,7 @@
   "name": "microtech-stampings",
   "version": "1.0.0",
   "description": "Microtech Stampings - Precision Metal Press Components",
+  "homepage": "https://harshwalke2.github.io/Microtech-Stampings",
   "private": true,
   "dependencies": {
     "react": "^18.3.1",
