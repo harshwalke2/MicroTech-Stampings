@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useState } from 'react';
 import '../styles/Contact.css';
+
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -12,11 +12,7 @@ function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    // Initialize EmailJS
-    emailjs.init('RZOuLLSgkqjD3HWnU');
-  }, []);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,27 +22,54 @@ function Contact() {
     }));
   };
 
+  const handleCardClick = (action) => {
+    switch(action) {
+      case 'address':
+        window.open('https://www.google.com/maps/place/Microtech+Stampings/@18.4840218,74.0109754,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2e96b4b5acbff:0xf545d623c1219792!8m2!3d18.4840218!4d74.0109754!16s%2Fg%2F11y0z9tm6c?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDEyMS4wIKXMDSoASAFQAw%3D%3D', '_blank');
+        break;
+      case 'phone':
+        window.location.href = 'tel:9404123171';
+        break;
+      case 'email':
+        window.location.href = 'mailto:microstampings@gmail.com';
+        break;
+      case 'linkedin':
+        window.open('https://www.linkedin.com/in/aryaan-attar-86a548220', '_blank');
+        break;
+      default:
+        break;
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.requirements) {
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
-      const response = await emailjs.send(
-        'service_xnb2dkv',
-        'template_2u5z8sf',
-        {
-          to_email: 'microstampings@gmail.com',
-          from_name: formData.name,
-          from_email: formData.email,
+      const response = await fetch('https://formspree.io/f/mreqjjzb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
           company: formData.company || 'Not provided',
           phone: formData.phone || 'Not provided',
           requirements: formData.requirements,
-          reply_to: formData.email
-        }
-      );
+        })
+      });
 
-      if (response.status === 200) {
-        alert('Thank you for your inquiry! We will contact you soon.');
+      if (response.ok) {
+        setSubmitStatus('success');
         setFormData({
           name: '',
           email: '',
@@ -54,10 +77,15 @@ function Contact() {
           phone: '',
           requirements: ''
         });
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 3000);
+      } else {
+        setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Email send error:', error);
-      alert('Failed to send your request. Please try again or contact us directly at microstampings@gmail.com');
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
     }
@@ -81,7 +109,7 @@ function Contact() {
             </div>
 
             <div className="contact-cards-grid">
-              <div className="contact-card">
+              <div className="contact-card" onClick={() => handleCardClick('address')} style={{cursor: 'pointer'}}>
                 <div className="card-icon">📍</div>
                 <div className="card-body">
                   <h5 className="card-title">Address</h5>
@@ -97,7 +125,7 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="contact-card">
+              <div className="contact-card" onClick={() => handleCardClick('phone')} style={{cursor: 'pointer'}}>
                 <div className="card-icon">📞</div>
                 <div className="card-body">
                   <h5 className="card-title">Phone</h5>
@@ -107,7 +135,7 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="contact-card">
+              <div className="contact-card" onClick={() => handleCardClick('email')} style={{cursor: 'pointer'}}>
                 <div className="card-icon">✉️</div>
                 <div className="card-body">
                   <h5 className="card-title">Email</h5>
@@ -117,17 +145,9 @@ function Contact() {
                 </div>
               </div>
 
-              <div className="contact-card">
-                <div className="card-icon">🏢</div>
-                <div className="card-body">
-                  <h5 className="card-title">Business</h5>
-                  <p className="card-text">
-                    Manufacturing, Trading, Importing & Exporting
-                  </p>
-                </div>
-              </div>
+              
 
-              <div className="contact-card">
+              <div className="contact-card" onClick={() => handleCardClick('linkedin')} style={{cursor: 'pointer'}}>
                 <div className="card-icon">💼</div>
                 <div className="card-body">
                   <h5 className="card-title">LinkedIn</h5>
@@ -148,6 +168,16 @@ function Contact() {
                 <p className="form-subtitle">Get a custom quote for your project</p>
               </div>
               <form className="contact-form" onSubmit={handleSubmit}>
+                {submitStatus === 'success' && (
+                  <div className="form-status-message success">
+                    Details Sent. We will contact you shortly.
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="form-status-message error">
+                    The details were not sent. Please contact us on other platforms.
+                  </div>
+                )}
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name">Your Name *</label>

@@ -1,55 +1,249 @@
-.values {
-  padding: 120px 0;
-  background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+/* ============================================================
+   VALUES SECTION - PREMIUM STRUCTURED DESIGN
+   ============================================================ */
+
+.values-section {
+  padding: 10px 20px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fc 100%);
+  position: relative;
 }
 
-.section-description {
-  font-size: 16px;
-  color: #4b5563;
-  margin-top: 16px;
+.values-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+/* ============================================================
+   PREMIUM CONTAINER CARD
+   ============================================================ */
+
+.values-card {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 12px 48px rgba(10, 14, 39, 0.08),
+              0 1px 3px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(59, 130, 246, 0.12);
+  padding: 80px 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background accent */
+.values-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.03) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+/* ============================================================
+   HEADER BLOCK
+   ============================================================ */
+
+.values-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+  color: #3b82f6;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.values-headline {
+  font-size: 56px;
+  font-weight: 800;
+  color: #0a0e27;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.values-subheadline {
+  font-size: 18px;
+  color: #5a6270;
+  line-height: 1.6;
+  font-weight: 400;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   DIVIDER
+   ============================================================ */
+
+.header-divider {
+  width: 200px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  margin: 0 auto 60px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   VALUES GRID - STRUCTURED LAYOUT
+   ============================================================ */
 
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  align-items: stretch;
+  position: relative;
+  z-index: 2;
 }
 
-.value-card {
-  background-color: #fff;
+/* ============================================================
+   VALUE CARD ITEM
+   ============================================================ */
+
+.value-card-item {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.02) 0%, rgba(139, 92, 246, 0.02) 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.value-card-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.value-card-item:hover {
+  border-color: rgba(59, 130, 246, 0.25);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.06) 0%, rgba(139, 92, 246, 0.06) 100%);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.12);
+  transform: translateY(-4px);
+}
+
+.value-card-item:hover::before {
+  transform: scaleX(1);
+}
+
+/* ============================================================
+   ICON CONTAINER
+   ============================================================ */
+
+.icon-container {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 28px;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #e5e7eb;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  animation: fadeInUp 0.6s ease;
-  animation-fill-mode: both;
+  position: relative;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(139, 92, 246, 0.08) 100%);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.value-card:hover {
-  border-color: #3b82f6;
-  box-shadow: 0 24px 48px rgba(59, 130, 246, 0.12);
-  transform: translateY(-8px);
+.value-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-.value-card:nth-child(1) {
-  animation-delay: 0.1s;
+.icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 130, 246, 0.1);
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.value-card:nth-child(2) {
-  animation-delay: 0.2s;
+.value-card-item:hover .icon-container {
+  border-color: rgba(59, 130, 246, 0.3);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(139, 92, 246, 0.12) 100%);
 }
 
-.value-card:nth-child(3) {
-  animation-delay: 0.3s;
+.value-card-item:hover .value-icon-img {
+  transform: scale(1.08);
 }
 
-.value-card:nth-child(4) {
-  animation-delay: 0.4s;
+.value-card-item:hover .icon-overlay {
+  opacity: 1;
 }
 
-.value-card:nth-child(5) {
-  animation-delay: 0.5s;
+/* ============================================================
+   CONTENT BLOCK
+   ============================================================ */
+
+.value-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
+
+.value-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0a0e27;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.value-card-item:hover .value-card-title {
+  color: #3b82f6;
+}
+
+.value-card-description {
+  font-size: 14px;
+  color: #5a6270;
+  line-height: 1.7;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+}
+
+/* ============================================================
+   ACCENT LINE
+   ============================================================ */
+
+.value-accent-line {
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, transparent);
+  transition: width 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  margin-top: auto;
+}
+
+.value-card-item:hover .value-accent-line {
+  width: 40px;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
 
 @keyframes fadeInUp {
   from {
@@ -62,170 +256,294 @@
   }
 }
 
-.value-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+.value-card-item {
+  animation: fadeInUp 0.6s ease-out backwards;
 }
 
-.value-image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-}
+.value-card-item:nth-child(1) { animation-delay: 0.1s; }
+.value-card-item:nth-child(2) { animation-delay: 0.2s; }
+.value-card-item:nth-child(3) { animation-delay: 0.3s; }
+.value-card-item:nth-child(4) { animation-delay: 0.4s; }
 
-.value-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
+/* ============================================================
+   RESPONSIVE DESIGN
+   ============================================================ */
 
-.value-card:hover .value-image img {
-  transform: scale(1.1);
-}
-
-.value-content {
-  padding: 32px;
-}
-
-.value-title {
-  font-size: 20px;
-  font-weight: 800;
-  color: #0a0e27;
-  margin-bottom: 12px;
-  line-height: 1.3;
-}
-
-.value-description {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #666;
-}
-
+/* Tablet (1200px and below) - 2 columns */
 @media (max-width: 1200px) {
-  .values-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .values {
-    padding: 70px 0;
+  .values-card {
+    padding: 60px 50px;
   }
 
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+  .values-headline {
+    font-size: 48px;
   }
 
-  .section-description {
-    font-size: 15px;
-  }
-
-  .value-image {
-    height: 190px;
-  }
-
-  .value-content {
-    padding: 23px;
-  }
-
-  .value-title {
-    font-size: 17px;
-    margin-bottom: 10px;
-  }
-
-  .value-description {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 768px) {
-  .values {
-    padding: 60px 0;
-  }
-
-  .values-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .section-header {
-    margin-bottom: 45px;
-  }
-
-  .section-subtitle {
-    font-size: 28px;
-  }
-
-  .section-description {
-    font-size: 14px;
-    margin-top: 12px;
-  }
-
-  .value-image {
-    height: 180px;
-  }
-
-  .value-content {
-    padding: 20px;
-  }
-
-  .value-title {
+  .values-subheadline {
     font-size: 16px;
-    margin-bottom: 10px;
   }
 
-  .value-description {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .value-card-item {
+    padding: 28px 20px;
+    min-height: 44px;
+  }
+
+  .icon-container {
+    height: 100px;
+    margin-bottom: 24px;
+  }
+
+  .value-card-title {
+    font-size: 17px;
+  }
+
+  .value-card-description {
+    font-size: 13px;
+  }
+}
+
+/* Tablet Portrait - 768px and below */
+@media (max-width: 768px) {
+  .values-section {
+    padding: 70px 18px;
+  }
+
+  .values-card {
+    padding: 50px 32px;
+    border-radius: 20px;
+  }
+
+  .values-header {
+    margin-bottom: 44px;
+  }
+
+  .eyebrow {
     font-size: 12px;
+  }
+
+  .values-headline {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .values-subheadline {
+    font-size: 15px;
     line-height: 1.6;
   }
 
-  .value-card {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
-  }
-}
-
-@media (max-width: 480px) {
-  .values {
-    padding: 40px 0;
+  .header-divider {
+    margin-bottom: 44px;
   }
 
   .values-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 32px;
   }
 
-  .section-header {
-    margin-bottom: 35px;
+  .value-card-item {
+    padding: 24px 20px;
+    min-height: 44px;
   }
 
-  .section-subtitle {
-    font-size: 24px;
+  .icon-container {
+    height: 120px;
+    margin-bottom: 20px;
   }
 
-  .section-description {
+  .value-card-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .value-card-description {
     font-size: 13px;
-    margin-top: 10px;
     line-height: 1.6;
   }
+}
 
-  .value-image {
-    height: 160px;
+/* Mobile - 640px and below */
+@media (max-width: 640px) {
+  .values-section {
+    padding: 60px 16px;
   }
 
-  .value-content {
-    padding: 18px;
+  .values-card {
+    padding: 45px 28px;
+    border-radius: 18px;
   }
 
-  .value-title {
+  .values-header {
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    margin-bottom: 12px;
+  }
+
+  .values-headline {
+    font-size: 32px;
+    margin-bottom: 10px;
+    letter-spacing: -0.8px;
+  }
+
+  .values-subheadline {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .header-divider {
+    width: 120px;
+    height: 3px;
+    margin-bottom: 40px;
+  }
+
+  .values-grid {
+    gap: 28px;
+  }
+
+  .value-card-item {
+    padding: 22px 18px;
+    min-height: 40px;
+  }
+
+  .icon-container {
+    height: 110px;
+    margin-bottom: 18px;
+  }
+
+  .value-card-title {
     font-size: 15px;
     margin-bottom: 8px;
   }
 
-  .value-description {
-    font-size: 11px;
+  .value-card-description {
+    font-size: 12px;
     line-height: 1.5;
+  }
+}
+
+/* Extra small - 480px and below */
+@media (max-width: 480px) {
+  .values-section {
+    padding: 50px 14px;
+  }
+
+  .values-card {
+    padding: 36px 20px;
+    border-radius: 16px;
+  }
+
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+  }
+
+  .values-headline {
+    font-size: 26px;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+  }
+
+  .values-subheadline {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .values-header {
+    margin-bottom: 32px;
+  }
+
+  .header-divider {
+    width: 60px;
+    height: 2px;
+    margin-bottom: 32px;
+  }
+
+  .values-grid {
+    gap: 20px;
+  }
+
+  .value-card-item {
+    padding: 18px 14px;
+    min-height: 40px;
+  }
+
+  .icon-container {
+    height: 90px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+  }
+
+  .value-card-title {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .value-card-description {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .value-accent-line {
+    margin-top: 10px;
+  }
+}
+
+/* Ultra-small devices - 360px and below */
+@media (max-width: 360px) {
+  .values-section {
+    padding: 40px 12px;
+  }
+
+  .values-card {
+    padding: 28px 16px;
+  }
+
+  .values-headline {
+    font-size: 22px;
+    margin-bottom: 6px;
+  }
+
+  .values-subheadline {
+    font-size: 12px;
+  }
+
+  .values-header {
+    margin-bottom: 24px;
+  }
+
+  .header-divider {
+    width: 40px;
+    margin-bottom: 24px;
+  }
+
+  .values-grid {
+    gap: 16px;
+  }
+
+  .value-card-item {
+    padding: 14px 12px;
+  }
+
+  .icon-container {
+    height: 80px;
+    margin-bottom: 10px;
+  }
+
+  .value-card-title {
+    font-size: 12px;
+  }
+
+  .value-card-description {
+    font-size: 10px;
   }
 }

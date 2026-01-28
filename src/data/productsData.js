@@ -27,6 +27,13 @@ export const products = [
       'Custom Fabrication',
       'Cost-Effective Manufacturing',
     ],
+    materials: ['Galvanized(GI)',
+      'Mild Steel',
+      'Stainless Steel',
+      'Aluminium',
+      'Copper',
+      'Brass'],
+    
     
   }
 ];

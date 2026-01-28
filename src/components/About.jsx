@@ -33,7 +33,7 @@ function About() {
                 Pune, Maharashtra, India
               </div>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=Pune,+Maharashtra,+India"
+                href="https://www.google.com/maps/place/Microtech+Stampings/@18.4840218,74.0109754,17z/data=!3m1!4b1!4m6!3m5!1s0x3bc2e96b4b5acbff:0xf545d623c1219792!8m2!3d18.4840218!4d74.0109754!16s%2Fg%2F11y0z9tm6c?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDEyNS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="get-direction-btn"

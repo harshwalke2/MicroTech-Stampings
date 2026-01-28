@@ -16,7 +16,7 @@ function Capabilities() {
               <span role="img" aria-label="gear" style={{ fontSize: '2rem', filter: 'drop-shadow(0 2px 8px #3b82f633)' }}>⚙️</span>
             </div>
             <div className="capability-content">
-              <h4 className="capability-title">C Type Duplex Mechanical Power Press</h4>
+              <h4 className="capability-title">Pneumatic Power Press</h4>
               <p className="capability-desc">High-precision pressing for complex metal forming operations with advanced control systems ensuring consistent quality across production runs.</p>
             </div>
           </div>

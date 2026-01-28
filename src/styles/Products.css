@@ -369,13 +369,14 @@
   }
 }
 
+/* Tablet - 1024px and below */
 @media (max-width: 1024px) {
   .products {
     padding: 100px 0;
   }
 
   .container {
-    padding: 0 30px;
+    padding: 0 28px;
   }
 
   .section-subtitle {
@@ -398,24 +399,38 @@
   .card-title {
     font-size: 24px;
   }
+
+  .btn-secondary {
+    padding: 12px 24px;
+    min-height: 48px;
+  }
 }
 
+/* Tablet Portrait - 768px and below */
 @media (max-width: 768px) {
   .products {
     padding: 80px 0;
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 18px;
+  }
+
+  .section-header {
+    margin-bottom: 60px;
   }
 
   .section-subtitle {
-    font-size: 34px;
+    font-size: 36px;
   }
 
   .products-grid {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .product-card {
+    animation: fadeInUp 0.6s ease-out;
   }
 
   .card-image-wrapper {
@@ -426,6 +441,10 @@
     padding: 32px 24px;
   }
 
+  .card-category {
+    font-size: 12px;
+  }
+
   .card-title {
     font-size: 22px;
     margin-bottom: 12px;
@@ -434,6 +453,7 @@
   .card-description {
     font-size: 14px;
     margin-bottom: 24px;
+    line-height: 1.6;
   }
 
   .features-two-column {
@@ -442,40 +462,56 @@
     margin-bottom: 24px;
   }
 
+  .card-features {
+    margin-bottom: 0;
+  }
+
   .btn-secondary {
     width: 100%;
     justify-content: center;
+    padding: 13px 24px;
+    min-height: 48px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile - 640px and below */
+@media (max-width: 640px) {
   .products {
-    padding: 60px 0;
+    padding: 70px 0;
   }
 
   .container {
     padding: 0 16px;
   }
 
+  .section-header {
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 12px;
+  }
+
   .section-subtitle {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .products-grid {
-    gap: 24px;
+    gap: 28px;
   }
 
   .card-image-wrapper {
-    height: 220px;
+    height: 240px;
   }
 
   .card-content {
-    padding: 24px 18px;
+    padding: 28px 20px;
   }
 
   .card-category {
     font-size: 11px;
-    padding: 5px 12px;
+    padding: 5px 10px;
   }
 
   .card-title {
@@ -485,41 +521,118 @@
 
   .card-description {
     font-size: 13px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .features-two-column {
     grid-template-columns: 1fr;
     gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .card-features {
-    margin-bottom: 0;
-  }
-
-  .feature-header {
-    font-size: 12px;
-    margin-bottom: 12px;
-  }
-
-  .feature-list li {
-    font-size: 13px;
-    padding-left: 24px;
-  }
-
-  .feature-list li:before {
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-  }
-
-  .btn {
-    padding: 12px 24px;
-    font-size: 13px;
+    margin-bottom: 18px;
   }
 
   .btn-secondary {
-    padding: 12px 24px;
+    width: 100%;
+    padding: 12px 18px;
+    min-height: 44px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small - 480px and below */
+@media (max-width: 480px) {
+  .products {
+    padding: 60px 0;
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  .section-title {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  .section-subtitle {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+  }
+
+  .products-grid {
+    gap: 20px;
+  }
+
+  .card-image-wrapper {
+    height: 200px;
+  }
+
+  .card-content {
+    padding: 22px 16px;
+  }
+
+  .card-category {
+    font-size: 10px;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .card-description {
+    font-size: 12px;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  .features-two-column {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .card-features {
+    font-size: 12px;
+  }
+
+  .btn-secondary {
+    width: 100%;
+    padding: 11px 14px;
+    min-height: 42px;
+    font-size: 12px;
+    border-radius: 8px;
+  }
+}
+
+/* Ultra-small devices - 360px and below */
+@media (max-width: 360px) {
+  .section-subtitle {
+    font-size: 22px;
+  }
+
+  .card-image-wrapper {
+    height: 180px;
+  }
+
+  .card-content {
+    padding: 18px 14px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+  .card-description {
+    font-size: 11px;
+  }
+
+  .btn-secondary {
+    padding: 10px 12px;
+    font-size: 11px;
   }
 }

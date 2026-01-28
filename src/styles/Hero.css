@@ -389,6 +389,7 @@
   }
 }
 
+/* Tablet - 1024px and below */
 @media (max-width: 1024px) {
   .hero-content {
     gap: 50px;
@@ -406,6 +407,7 @@
   .btn {
     padding: 14px 32px;
     font-size: 14px;
+    min-height: 48px;
   }
 
   .hero-stats {
@@ -423,13 +425,14 @@
   }
 }
 
+/* Tablet Portrait - 768px and below */
 @media (max-width: 768px) {
   .hero {
     margin-top: 50px;
   }
 
   .hero-container {
-    padding: 0 20px;
+    padding: 0 18px;
   }
 
   .hero-content {
@@ -438,29 +441,41 @@
   }
 
   .hero-title {
-    font-size: 36px;
+    font-size: 40px;
     margin-bottom: 16px;
+    letter-spacing: -1.2px;
   }
 
   .hero-subtitle {
-    font-size: 15px;
+    font-size: 16px;
     margin-bottom: 28px;
     max-width: 100%;
+    line-height: 1.7;
   }
 
   .hero-buttons {
     gap: 12px;
+    flex-wrap: wrap;
   }
 
   .btn {
-    padding: 12px 28px;
-    font-size: 13px;
+    padding: 13px 26px;
+    font-size: 14px;
+    min-height: 48px;
+    flex: 1;
+    min-width: 140px;
   }
 
   .hero-stats {
     gap: 20px;
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
+  }
+
+  .stat {
+    width: 100%;
+    min-height: 44px;
   }
 
   .stat-icon {
@@ -478,9 +493,11 @@
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile - 640px and below */
+@media (max-width: 640px) {
   .hero {
-    margin-top: 0;
+    margin-top: 40px;
+    min-height: 90vh;
   }
 
   .hero-container {
@@ -488,40 +505,39 @@
   }
 
   .hero-content {
-    gap: 30px;
+    gap: 32px;
     padding: 30px 0 20px;
   }
 
-  .hero-text {
-    animation: fadeInUp 0.8s ease-out;
+  .hero-badge {
+    font-size: 11px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
   }
 
   .hero-title {
-    font-size: 28px;
+    font-size: 32px;
     margin-bottom: 12px;
-    letter-spacing: -1px;
+    letter-spacing: -0.8px;
+    line-height: 1.15;
   }
 
   .hero-subtitle {
-    font-size: 13px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 24px;
     line-height: 1.6;
-  }
-
-  .hero-badge {
-    font-size: 10px;
-    padding: 6px 14px;
-    margin-bottom: 16px;
   }
 
   .hero-buttons {
     gap: 10px;
-    margin-bottom: 32px;
+    width: 100%;
   }
 
   .btn {
-    padding: 11px 20px;
-    font-size: 12px;
+    padding: 12px 20px;
+    font-size: 13px;
+    min-height: 44px;
     flex: 1;
   }
 
@@ -549,28 +565,110 @@
   .stat-number {
     font-size: 18px;
   }
+}
 
-  .stat-label {
+/* Extra small - 480px and below */
+@media (max-width: 480px) {
+  .hero {
+    margin-top: 0;
+    min-height: 85vh;
+  }
+
+  .hero-container {
+    padding: 0 14px;
+  }
+
+  .hero-content {
+    gap: 28px;
+    padding: 28px 0 16px;
+  }
+
+  .hero-text {
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  .hero-badge {
     font-size: 10px;
+    padding: 6px 12px;
+    margin-bottom: 14px;
+    letter-spacing: 0.8px;
   }
 
-  .hero-scroll-indicator {
-    bottom: 15px;
+  .hero-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+    letter-spacing: -0.6px;
+    line-height: 1.2;
   }
 
-  .scroll-text {
-    font-size: 10px;
+  .hero-subtitle {
+    font-size: 13px;
+    margin-bottom: 18px;
+    line-height: 1.5;
   }
 
-  .scroll-arrow {
-    width: 20px;
-    height: 32px;
-    padding: 6px 0;
+  .hero-buttons {
+    gap: 8px;
+    margin-bottom: 24px;
+    width: 100%;
   }
 
-  .scroll-arrow span {
-    width: 1.5px;
-    height: 4px;
+  .btn {
+    padding: 11px 16px;
+    font-size: 12px;
+    min-height: 42px;
+    flex: 1;
+    border-radius: 8px;
+  }
+
+  .btn-icon {
+    font-size: 13px;
+  }
+
+  .hero-stats {
+    gap: 14px;
+    width: 100%;
+  }
+
+  .stat {
+    gap: 10px;
+    width: 100%;
+    min-height: 42px;
+  }
+
+  .stat-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+
+  .stat-number {
+    font-size: 16px;
+  }
+
+  .stat-text {
+    font-size: 12px;
+  }
+}
+
+/* Ultra-small devices - 360px and below */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 22px;
+  }
+
+  .hero-subtitle {
+    font-size: 12px;
+  }
+
+  .btn {
+    padding: 10px 14px;
+    font-size: 11px;
+    min-height: 40px;
+  }
+  .stat-number {
+    font-size: 14px;
   }
 }
 
