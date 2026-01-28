@@ -612,8 +612,21 @@
 
 /* Ultra-small devices - 360px and below */
 @media (max-width: 360px) {
+  .products {
+    padding: 50px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-header {
+    margin-bottom: 35px;
+  }
+
   .section-subtitle {
     font-size: 22px;
+    word-break: break-word;
   }
 
   .card-image-wrapper {
@@ -624,15 +637,122 @@
     padding: 18px 14px;
   }
 
+  .card-category {
+    font-size: 9px;
+    padding: 3px 6px;
+  }
+
   .card-title {
     font-size: 16px;
+    margin-bottom: 6px;
   }
+
   .card-description {
     font-size: 11px;
+    margin-bottom: 12px;
+  }
+
+  .features-two-column {
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .feature-header {
+    font-size: 11px;
+  }
+
+  .feature-list li {
+    font-size: 11px;
+    padding-left: 24px;
   }
 
   .btn-secondary {
     padding: 10px 12px;
     font-size: 11px;
+    min-height: 40px;
+  }
+}
+
+/* Very small devices - 320px and below */
+@media (max-width: 320px) {
+  .products {
+    padding: 45px 0;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 9px;
+    padding: 5px 10px;
+  }
+
+  .section-subtitle {
+    font-size: 20px;
+    word-break: break-word;
+  }
+
+  .products-grid {
+    gap: 16px;
+  }
+
+  .card-image-wrapper {
+    height: 160px;
+  }
+
+  .card-content {
+    padding: 14px 12px;
+  }
+
+  .card-category {
+    font-size: 8px;
+    padding: 3px 5px;
+    margin-bottom: 6px;
+  }
+
+  .card-title {
+    font-size: 15px;
+    margin-bottom: 5px;
+    line-height: 1.2;
+  }
+
+  .card-description {
+    font-size: 10px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .features-two-column {
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .feature-header {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+
+  .feature-list li {
+    font-size: 10px;
+    padding-left: 22px;
+    margin-bottom: 4px;
+  }
+
+  .feature-list li:before {
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+  }
+
+  .btn-secondary {
+    padding: 9px 10px;
+    font-size: 10px;
+    min-height: 38px;
+    border-radius: 6px;
   }
 }

@@ -285,66 +285,71 @@
 /* Mobile - 640px and below */
 @media (max-width: 640px) {
   .capabilities {
-    padding: 70px 0;
+    padding: 60px 0;
   }
 
   .container {
-    padding: 0 16px;
+    padding: 0 14px;
   }
 
   .section-header {
-    margin-bottom: 50px;
-  }
-
-  .section-title {
-    font-size: 12px;
-  }
-
-  .section-subtitle {
-    font-size: 30px;
-  }
-
-  .capabilities-grid {
-    gap: 28px;
     margin-bottom: 40px;
   }
 
+  .section-title {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  .section-subtitle {
+    font-size: 28px;
+    word-break: break-word;
+  }
+
+  .capabilities-grid {
+    gap: 20px;
+    margin-bottom: 32px;
+    grid-template-columns: 1fr;
+  }
+
   .capability-card {
-    padding: 32px 24px;
+    padding: 24px 16px;
+    margin: 0;
+    border-radius: 16px;
   }
 
   .capability-icon {
-    width: 48px;
-    height: 48px;
-    margin-bottom: 18px;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 14px;
   }
 
   .capability-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
   .capability-title {
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 
   .capability-desc {
     font-size: 12px;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   .manufacturing-info {
-    padding: 32px 24px;
+    padding: 24px 16px;
   }
 
   .info-label {
-    font-size: 12px;
-    margin-bottom: 8px;
+    font-size: 11px;
+    margin-bottom: 6px;
   }
 
   .info-value {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -418,28 +423,110 @@
 
 /* Ultra-small devices - 360px and below */
 @media (max-width: 360px) {
+  .capabilities {
+    padding: 40px 0;
+  }
+
+  .container {
+    padding: 0 12px;
+  }
+
+  .section-header {
+    margin-bottom: 30px;
+  }
+
   .section-subtitle {
-    font-size: 22px;
+    font-size: 20px;
+  }
+
+  .capabilities-grid {
+    gap: 16px;
   }
 
   .capability-card {
-    padding: 20px 14px;
+    padding: 18px 12px;
+    border-radius: 12px;
   }
 
   .capability-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+    margin-bottom: 12px;
+  }
+
+  .capability-icon svg {
+    width: 18px;
+    height: 18px;
   }
 
   .capability-title {
-    font-size: 14px;
+    font-size: 13px;
+    margin-bottom: 6px;
   }
 
   .capability-desc {
     font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .manufacturing-info {
+    padding: 18px 12px;
+  }
+
+  .info-label {
+    font-size: 10px;
+    margin-bottom: 4px;
   }
 
   .info-value {
     font-size: 18px;
+  }
+}
+
+/* Ultra-small devices - 320px and below */
+@media (max-width: 320px) {
+  .capabilities {
+    padding: 30px 0;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .section-title {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+    word-break: break-word;
+  }
+
+  .capabilities-grid {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .capability-card {
+    padding: 14px 10px;
+  }
+
+  .capability-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+  }
+
+  .capability-title {
+    font-size: 12px;
+  }
+
+  .capability-desc {
+    font-size: 9px;
+  }
+
+  .info-value {
+    font-size: 16px;
   }
 }
