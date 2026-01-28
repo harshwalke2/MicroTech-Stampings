@@ -1,3 +1,11 @@
+@media (max-width: 640px) {
+  .contact {
+    background: rgba(10, 14, 39, 0.96);
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(10,14,39,0.18);
+    padding: 18px 10px;
+  }
+}
 /* Status message styles */
 .form-status-message {
   margin-bottom: 18px;
