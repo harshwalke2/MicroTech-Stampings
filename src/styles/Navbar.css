@@ -262,24 +262,79 @@
   }
   
   .navbar-logo {
-    font-size: 12px;
-    gap: 6px;
+    font-size: 14px;
+    gap: 8px;
   }
   
   .logo-img {
-    height: 24px;
-    width: 24px;
+    height: 28px;
+    width: 28px;
   }
   
   .logo-text {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 120px;
+    max-width: 140px;
+    font-weight: 800;
   }
   
   .navbar-menu a {
     font-size: 12px;
+  }
+}
+
+/* Very small devices - 320px and below */
+@media (max-width: 320px) {
+  .navbar-container {
+    padding: 0 8px;
+  }
+  
+  .navbar-logo {
+    font-size: 13px;
+    gap: 6px;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .logo-img {
+    height: 24px;
+    width: 24px;
+    flex-shrink: 0;
+  }
+  
+  .logo-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100px;
+    font-weight: 800;
+  }
+  
+  .navbar-menu {
+    top: 50px;
+    padding: 6px 0;
+  }
+
+  .navbar-menu li {
+    padding: 12px 12px;
+    min-height: 42px;
+  }
+
+  .navbar-menu a {
+    font-size: 11px;
+    min-height: 42px;
+  }
+
+  .hamburger {
+    gap: 4px;
+    min-width: 38px;
+    min-height: 38px;
+  }
+
+  .hamburger span {
+    width: 18px;
+    height: 2px;
   }
 }
 /* src/styles/Navbar.css */

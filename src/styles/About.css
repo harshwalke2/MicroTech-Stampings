@@ -304,7 +304,7 @@
   }
 
   .section-title {
-    font-size: 12px;
+    display: none;
   }
 
   .section-subtitle {
@@ -358,8 +358,7 @@
   }
 
   .section-title {
-    font-size: 10px;
-    padding: 6px 12px;
+    display: none;
   }
 
   .section-subtitle {
@@ -426,6 +425,10 @@
     margin-bottom: 35px;
   }
 
+  .section-title {
+    display: none;
+  }
+
   .section-subtitle {
     font-size: 22px;
     word-break: break-word;
@@ -485,8 +488,7 @@
   }
 
   .section-title {
-    font-size: 9px;
-    padding: 5px 10px;
+    display: none;
   }
 
   .section-subtitle {
