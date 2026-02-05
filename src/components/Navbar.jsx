@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Navbar.css';
-import logoImg from '../assets/photo2.png';
+import logoImg from '../assets/logo2.png';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +18,7 @@ function Navbar() {
       <div className="navbar-container">
         <div className="navbar-logo">
           <img src={logoImg} alt="MicrotechStampings Logo" className="logo-img" />
-          <span className="logo-text">MicrotechStampings</span>
+          <span className="logo-text">Microtech Stampings</span>
         </div>
         <div className={`hamburger ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
           <span></span>

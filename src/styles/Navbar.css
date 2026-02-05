@@ -1,60 +1,52 @@
 .navbar {
   background: linear-gradient(90deg, #23263a 0%, #2d3250 100%);
   color: #fff;
-  padding: 18px 0;
+  padding: 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
-  border-bottom: 1px solid rgba(59, 130, 246, 0.18);
+  box-shadow: none;
+  border-bottom: none;
 }
 
 .navbar-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 8px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.navbar-logo {
-  font-size: 26px;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  transition: transform 200ms ease-out;
+  height: auto;
+  min-height: 56px;
 }
 
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 26px;
+  gap: 16px;
+  font-size: 18px;
   font-weight: 800;
   letter-spacing: -0.5px;
   color: #fff;
   transition: transform 200ms ease-out;
+  height: auto;
+  z-index: 10;
 }
 .navbar-logo:hover {
   transform: scale(1.05);
 }
 .logo-img {
-  height: 38px;
-  width: 38px;
+  height: 28px;
+  width: 28px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 6px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+  flex-shrink: 0;
 }
 .logo-text {
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff;
+  font-weight: 800;
 }
 .navbar-menu a {
   color: #4b5563;
@@ -111,10 +103,52 @@
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
+/* Desktop Navigation (Default) */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navbar-menu li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* Desktop - 1025px and above (MAINTAIN COMPACT NAVBAR) */
+@media (min-width: 1025px) {
+  .navbar-container {
+    min-height: 52px;
+  }
+
+  .navbar-logo {
+    font-size: 16px;
+  }
+
+  .logo-img {
+    height: 24px;
+    width: 24px;
+  }
+
+  .navbar-menu a {
+    font-size: 13px;
+    color: #9ca3af;
+  }
+
+  .navbar-menu a:hover {
+    color: #3b82f6;
+  }
+}
+
 /* Tablet - 1024px and below */
 @media (max-width: 1024px) {
   .navbar-container {
-    padding: 0 28px;
+    padding: 8px 28px;
+    min-height: 56px;
   }
 
   .navbar-menu {
@@ -123,26 +157,28 @@
 
   .navbar-menu a {
     font-size: 13px;
+    color: #9ca3af;
   }
   
   .navbar-logo {
-    font-size: 22px;
+    font-size: 18px;
   }
   
   .logo-img {
-    height: 32px;
-    width: 32px;
+    height: 28px;
+    width: 28px;
   }
 }
 
 /* Tablet Portrait - 768px and below */
 @media (max-width: 768px) {
   .navbar {
-    padding: 12px 0;
+    padding: 0;
   }
 
   .navbar-container {
-    padding: 0 16px;
+    padding: 8px 16px;
+    min-height: 52px;
   }
 
   .navbar-menu {
@@ -150,15 +186,18 @@
     top: 60px;
     left: 0;
     width: 100%;
-    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+    background: rgba(10, 14, 39, 0.98);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     flex-direction: column;
     gap: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 12px 0;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     z-index: 999;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
   }
 
   .navbar-menu.active {
@@ -179,15 +218,18 @@
 
   .navbar-menu a {
     font-size: 14px;
-    color: #a8afd8;
+    color: #e5e7eb;
     width: 100%;
     min-height: 44px;
     display: flex;
     align-items: center;
+    font-weight: 600;
+    transition: all 200ms ease-out;
   }
 
   .navbar-menu a:hover {
     color: #3b82f6;
+    padding-left: 8px;
   }
 
   .hamburger {
@@ -263,7 +305,7 @@
   
   .navbar-logo {
     font-size: 14px;
-    gap: 8px;
+    gap: 10px;
   }
   
   .logo-img {
@@ -272,11 +314,10 @@
   }
   
   .logo-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 140px;
     font-weight: 800;
+    word-wrap: break-word;
+    max-width: 140px;
+    line-height: 1.2;
   }
   
   .navbar-menu a {
@@ -292,7 +333,7 @@
   
   .navbar-logo {
     font-size: 13px;
-    gap: 6px;
+    gap: 8px;
     flex: 1;
     min-width: 0;
   }
@@ -304,11 +345,10 @@
   }
   
   .logo-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 100px;
     font-weight: 800;
+    word-wrap: break-word;
+    max-width: 90px;
+    line-height: 1.2;
   }
   
   .navbar-menu {
@@ -335,70 +375,5 @@
   .hamburger span {
     width: 18px;
     height: 2px;
-  }
-}
-/* src/styles/Navbar.css */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(10, 14, 39, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--glass-border);
-  padding: 1rem 0;
-  transition: all 0.3s ease;
-}
-
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar-logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  background: linear-gradient(to right, #3b82f6, #60a5fa);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.navbar-menu {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-}
-
-.navbar-menu a {
-  color: #d1d5db;
-  font-weight: 500;
-  font-size: 0.9375rem;
-  transition: color 0.3s ease;
-}
-
-.navbar-menu a:hover {
-  color: var(--primary);
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-  .navbar-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 80%;
-    background: var(--dark-bg);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s ease;
-  }
-
-  .navbar-menu.active {
-    right: 0;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
   }
 }

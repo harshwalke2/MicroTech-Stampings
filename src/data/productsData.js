@@ -5,7 +5,7 @@ export const products = [
     category: 'COLD ROOM SOLUTIONS',
     description:
       "Microtech's Camlock ensures airtight panel locking to prevent thermal leakage, maintaining uniform temperature inside cold rooms and reducing cooling costs.",
-    image: 'https://microtechstampings.lovable.app/assets/product-camlock-BI7DjqIE.jpg',
+    image: '/assets/camlock.jpeg',
     stampingTypes: [
       'Strong metal construction for durability',
       'Firm interlocking for gap-free joints',
