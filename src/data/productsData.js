@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    title: 'Metal CamLocks for PUF/Sandwhich Panels',
+    title: 'Metal CamLocks for PUF/Sandwich Panels',
     category: 'COLD ROOM SOLUTIONS',
     description:
       "Microtech's Camlock ensures airtight panel locking to prevent thermal leakage, maintaining uniform temperature inside cold rooms and reducing cooling costs.",
